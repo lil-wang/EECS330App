@@ -132,14 +132,15 @@ body {
 }
 
 .addtrans{
+  margin-top: 50px;
   text-align: center;
-  margin-left: 1200px;
   border-style: solid;
   border-radius: 10px;
   padding-left: 15px;
   padding-top: 15px;
   font-style: Helvetica;
   font-size: 20px;
+  font-weight: bold;
   width: 235px;
   height: 350px;
 }
