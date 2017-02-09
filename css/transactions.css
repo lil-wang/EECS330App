@@ -72,10 +72,13 @@ body {
 }
 
 .addtrans{
+  text-align: center;
   margin-left: 1200px;
   border-style: solid;
   border-radius: 10px;
   padding-left: 15px;
   padding-top: 15px;
   margin-right: 100px;
+  font-style: Helvetica;
+  font-size: 20px;
 }
