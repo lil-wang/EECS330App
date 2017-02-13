@@ -266,3 +266,62 @@ a.navbar-tag {
 		line-height: 1.8;
 	}
 }
+
+
+/* for the 4 tabs on the setting page */
+.bankaccount{
+    width: 500px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 25px;
+    text-align: left;
+    background-color:rgb(232, 236, 245);
+    font-size:30px;
+}
+
+.accountname{
+  font-size: 40px;
+  font-weight: 900;
+
+}
+
+.subheader{
+  color:grey;
+}
+
+.contents{
+  border:1px solid black;
+  width:500px;
+  padding: 10px;
+  margin:10px;
+  background-color:rgb(232, 236, 245);
+
+}
+
+.contents_title{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contents_display{
+  border:1px solid black;
+  background-color:white;
+  width:200px;
+  padding:2px;
+}
+
+.button{
+  background-color:white;
+  margin:2px;
+}
+
+.button_selected{
+  background-color:lightgrey;
+}
+
+
+.chosen{
+  background-color:lightgrey;
+}
+
+/* end of the 4 tabs on the setting page */
