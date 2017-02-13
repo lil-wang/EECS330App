@@ -1,6 +1,6 @@
-var categories= ['','Accessories', 'Audiophile', 'Camera & Photo', 'Cell Phones', 'Computers','eBook Readers','Gadgets','GPS & Navigation','Home Audio','Office Electronics','Portable Audio','Portable Video','Security & Surveillance','Service','Television & Video','Car & Vehicle'];
+var categories= ['','Air Travel', 'Business Services', 'Check', 'Clothing', 'Coffee','Dining','Groceries','Income','Mobile Phone','Movies + DVDs','Music','Shopping','Transfer','Transportation'];
 
-var dollars = [213,209,190,179,156,209,190,179,213,209,190,179,156,209,190,190];
+var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,155,160.58,113.06,109.99,269.23,156,98.56,100.52];
 
 var colors = ['#0000b4','#0082ca','#0094ff','#0d4bcf','#0066AE','#074285','#00187B','#285964','#405F83','#416545','#4D7069','#6E9985','#7EBC89','#0283AF','#79BCBF','#99C19E'];
 
