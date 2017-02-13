@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico">
 
   <title>:: Transactions ::</title>
 
@@ -14,8 +13,16 @@
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <!-- AJAX -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!--jquery dataTables-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Include Bootstrap Datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+  <!--jquery stylesheet-->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -49,7 +56,7 @@
     <div class="col-sm-9 col-md-9 main" id="transactionstable">
       <h1 class="page-header">Transactions</h1>
       <div class="table-responsive">
-        <table class="table table-striped">
+        <table id="transactions" class="table table-striped">
           <thead>
             <tr>
               <th>Date</th>
@@ -59,118 +66,260 @@
               <th>Account</th>
             </tr>
           </thead>
+          <tfoot>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Account</th>
+            </tr>
+          </tfoot>
           <tbody>
             <tr>
-              <td>1,001</td>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>sit</td>
+              <td>2/8/17</td>
+              <td>Amazon</td>
+              <td>Shopping</td>
+              <td>6.00</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,002</td>
-              <td>amet</td>
-              <td>consectetur</td>
-              <td>adipiscing</td>
-              <td>elit</td>
+              <td>2/8/17</td>
+              <td>eBay</td>
+              <td>Shopping</td>
+              <td>62.59</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,003</td>
-              <td>Integer</td>
-              <td>nec</td>
-              <td>odio</td>
-              <td>Praesent</td>
+              <td>2/8/17</td>
+              <td>Newegg</td>
+              <td>Shopping</td>
+              <td>250.00</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,003</td>
-              <td>libero</td>
-              <td>Sed</td>
-              <td>cursus</td>
-              <td>ante</td>
+              <td>2/8/17</td>
+              <td>Trader Joe's</td>
+              <td>Groceries</td>
+              <td>15.01</td>
+              <td>Visa Credit</td>
             </tr>
             <tr>
-              <td>1,004</td>
-              <td>dapibus</td>
-              <td>diam</td>
-              <td>Sed</td>
-              <td>nisi</td>
+              <td>2/7/17</td>
+              <td>Check 17021</td>
+              <td>Check</td>
+              <td>870.00</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,005</td>
-              <td>Nulla</td>
-              <td>quis</td>
-              <td>sem</td>
-              <td>at</td>
+              <td>2/7/17</td>
+              <td>Uber</td>
+              <td>Transportation</td>
+              <td>13.58</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,006</td>
-              <td>nibh</td>
-              <td>elementum</td>
-              <td>imperdiet</td>
-              <td>Duis</td>
+              <td>2/7/17</td>
+              <td>iTunes</td>
+              <td>Music</td>
+              <td>9.99</td>
+              <td>Visa Credit</td>
             </tr>
             <tr>
-              <td>1,007</td>
-              <td>sagittis</td>
-              <td>ipsum</td>
-              <td>Praesent</td>
-              <td>mauris</td>
+              <td>2/7/17</td>
+              <td>United Tx</td>
+              <td>Air Travel</td>
+              <td>182.00</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,008</td>
-              <td>Fusce</td>
-              <td>nec</td>
-              <td>tellus</td>
-              <td>sed</td>
+              <td>2/6/17</td>
+              <td>Netflix</td>
+              <td>Movies + DVDs</td>
+              <td>5.30</td>
+              <td>Citibank</td>
             </tr>
             <tr>
-              <td>1,009</td>
-              <td>augue</td>
-              <td>semper</td>
-              <td>porta</td>
-              <td>Mauris</td>
+              <td>2/6/17</td>
+              <td>Amazon</td>
+              <td>Shopping</td>
+              <td>10.87</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,010</td>
-              <td>massa</td>
-              <td>Vestibulum</td>
-              <td>lacinia</td>
-              <td>arcu</td>
+              <td>2/6/17</td>
+              <td>Nike</td>
+              <td>Clothing</td>
+              <td>100.53</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,011</td>
-              <td>eget</td>
-              <td>nulla</td>
-              <td>Class</td>
-              <td>aptent</td>
+              <td>2/6/17</td>
+              <td>Adidas</td>
+              <td>Transportation</td>
+              <td>14.26</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,012</td>
-              <td>taciti</td>
-              <td>sociosqu</td>
-              <td>ad</td>
-              <td>litora</td>
+              <td>2/6/17</td>
+              <td>Cinema 12</td>
+              <td>Movies + DVDs</td>
+              <td>7.76</td>
+              <td>Visa Credit</td>
             </tr>
             <tr>
-              <td>1,013</td>
-              <td>torquent</td>
-              <td>per</td>
-              <td>conubia</td>
-              <td>nostra</td>
+              <td>2/6/17</td>
+              <td>Zara</td>
+              <td>Clothing</td>
+              <td>24.23</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,014</td>
-              <td>per</td>
-              <td>inceptos</td>
-              <td>himenaeos</td>
-              <td>Curabitur</td>
+              <td>2/5/17</td>
+              <td>Check 17020</td>
+              <td>Check</td>
+              <td>344.12</td>
+              <td>American Express</td>
             </tr>
             <tr>
-              <td>1,015</td>
-              <td>sodales</td>
-              <td>ligula</td>
-              <td>in</td>
-              <td>libero</td>
+              <td>2/5/17</td>
+              <td>Refund</td>
+              <td>Income</td>
+              <td>50.00</td>
+              <td>Citibank</td>
+            </tr>
+            <tr>
+              <td>2/5/17</td>
+              <td>Uber</td>
+              <td>Transportation</td>
+              <td>28.56</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/5/17</td>
+              <td>Venmo</td>
+              <td>Transfer</td>
+              <td>8.56</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/5/17</td>
+              <td>Puma</td>
+              <td>Clothing</td>
+              <td>20.4</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/5/17</td>
+              <td>Chipotle</td>
+              <td>Dining</td>
+              <td>8.00</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/4/17</td>
+              <td>Olive Garden</td>
+              <td>Dining</td>
+              <td>62.59</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/4/17</td>
+              <td>Wholefoods</td>
+              <td>Groceries</td>
+              <td>25</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/4/17</td>
+              <td>Pacsun</td>
+              <td>Shopping</td>
+              <td>45.01</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/4/17</td>
+              <td>Blackwood BBQ</td>
+              <td>Dining</td>
+              <td>18.00</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/4/17</td>
+              <td>Verizon</td>
+              <td>Mobile Phone</td>
+              <td>60.58</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/3/17</td>
+              <td>Wholefoods</td>
+              <td>Groceries</td>
+              <td>69.99</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/3/17</td>
+              <td>Burger King</td>
+              <td>Dining</td>
+              <td>4.82</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/3/17</td>
+              <td>Starbucks</td>
+              <td>Coffee</td>
+              <td>5.30</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/2/17</td>
+              <td>Ramen San</td>
+              <td>Dining</td>
+              <td>18.87</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/2/17</td>
+              <td>Namecheap</td>
+              <td>Business Services</td>
+              <td>10.53</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/2/17</td>
+              <td>Yolk</td>
+              <td>Dining</td>
+              <td>34.26</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/2/17</td>
+              <td>Nike</td>
+              <td>Shopping</td>
+              <td>94.76</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/1/17</td>
+              <td>Paycheck</td>
+              <td>Income</td>
+              <td>5.00</td>
+              <td>American Express</td>
+            </tr>
+            <tr>
+              <td>2/1/17</td>
+              <td>Uber</td>
+              <td>Transportation</td>
+              <td>44.12</td>
+              <td>Visa Credit</td>
+            </tr>
+            <tr>
+              <td>2/1/17</td>
+              <td>Jewel Osco</td>
+              <td>Groceries</td>
+              <td>102.00</td>
+              <td>Visa Credit</td>
             </tr>
           </tbody>
         </table>
@@ -180,7 +329,12 @@
         <h1 class="page-header">Add Transactions</h1>
         <form class="form" role="form" method="post" action="pages/dashboard.html" accept-charset="UTF-8" id="login-nav">
           <div class="form-group">
-            <input class="form-control" placeholder="Date" required>
+            <div class="date">
+              <div class="input-append date" id="datePicker" data-date-format="mm/dd/yyyy">
+                <input class="form-control" type="text" placeholder="Date" required>
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <input class="form-control" placeholder="Description" required>
@@ -200,9 +354,10 @@
         </form>
     </div>
 
-
+  <div class="container-fluid">
+    <div id="table"></div>
+    <script type="text/javascript" src="../js/transactions.js"></script>
   </div>
-</div>
 
 
 </body>
