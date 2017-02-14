@@ -6,7 +6,7 @@ $(document).ready(function(){
    $(document).scroll(function() {
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
-          $('.navbar').css('background', '#fff');
+          $('.navbar').css('background', '#00a5f6');
           $('.navbar').fadeTo(500,0.9);
        } else {
           $('.navbar').css('background', 'transparent');''

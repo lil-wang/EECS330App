@@ -1,71 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>:: Budget ::</title>
-    <!--d3.js-->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <!-- AJAX -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>:: Budget ::</title>
+  <!--d3.js-->
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <!-- AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Custom styles for this template -->
+  <link href="../css/budget.css" rel="stylesheet">
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="../pages/dashboard.html">
-            <img src="../assets/logo.png" width="50" height="50" alt="logo">
-          </a>
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background: #00a5f6;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="../pages/dashboard.html">
+          <img src="../assets/logo_2.png" width="50" height="50" alt="logo">
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../pages/dashboard.html">Dashboard</a></li>
+          <li><a href="../pages/transactions.html">Transactions</a></li>
+          <li><a href="../pages/budget.html">Budget</a></li>
+          <li><a href="../pages/setting.html">Setting</a></li>
+          <li><a href="../index.html">Log Out</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+
+    <div class="col-sm-12 col-md-12 main">
+      <h1 class="page-header">Budget</h1>
+
+    <div class="row budget-row">
+          <div class="col-sm-2 col-md-2">
+            Air Travel
+          </div>
+          <div class="col-sm-8 col-md-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+              aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+              60.6% Reached
+            </div>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../pages/dashboard.html">Dashboard</a></li>
-            <li><a href="../pages/transactions.html">Transactions</a></li>
-            <li><a href="../pages/budget.html">Budget</a></li>
-            <li><a href="../pages/setting.html">Setting</a></li>
-          </ul>
+        <div class="col-sm-2 col-md-2">
+          $182 / $300
         </div>
       </div>
-    </nav>
-
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="../pages/transactions.html">Transactions</a></li>
-            <li><a href="#budgets">Budgets</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">item</a></li>
-            <li><a href="">item</a></li>
-            <li><a href="">item</a></li>
-            <li><a href="">item</a></li>
-            <li><a href="">item</a></li>
-          </ul>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Business Services</p>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-          <div id="overviewchart"></div>
-          <script type="text/javascript" src="../js/overview.js"></script>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% Reached
+          </div>
         </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$100 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Check</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+            60% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$121 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Clothing</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+            aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width:73%">
+            73% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$145 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Coffee</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%">
+            83% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$105 / $120</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Dining</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+            aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+            30% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$147 / $500</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Groceries</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+            85% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$212 / $250</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Mobile Phone</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+            80% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$160 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Movies/DVD</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+            aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width:56%">
+            56% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$113 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Music</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+            aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width:67%">
+            67% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$100 / $150</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Shopping</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
+            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            108% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p><b>$270</b> / $250</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Transfer</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+            aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width:78%">
+            78% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$156 / $200</p>
+      </div>
+    </div>
+    <div class="row budget-row">
+        <div class="col-sm-2 col-md-2">
+          <p>Transportation</p>
+        </div>
+        <div class="col-sm-8 col-md-8">
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            50% Reached
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <p>$100 / $200</p>
       </div>
     </div>
 
-  </body>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>

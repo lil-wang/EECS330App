@@ -5,6 +5,8 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: "Open Sans";
+
 }
 
 
@@ -33,6 +35,21 @@ body {
 .navbar-brand {
   padding-left: 10px;
   padding-top: 0px;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #FFFFFF;
+  font-weight:300;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  margin: inherit;
+  padding: 40px auto 40px auto;
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.8px;
 }
 /*
  * Sidebar

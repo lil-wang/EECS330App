@@ -1,6 +1,6 @@
-var categories= ['','Air Travel', 'Business Services', 'Check', 'Clothing', 'Coffee','Dining','Groceries','Income','Mobile Phone','Movies + DVDs','Music','Shopping','Transfer','Transportation'];
+var categories= ['','Air Travel', 'Business Services', 'Check', 'Clothing', 'Coffee','Dining','Groceries','Mobile Phone','Movies + DVDs','Music','Shopping','Transfer','Transportation'];
 
-var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,155,160.58,113.06,109.99,269.23,156,98.56,100.52];
+var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,160.58,113.06,109.99,269.23,156,100.52];
 
 var colors = ['#0000b4','#0082ca','#0094ff','#0d4bcf','#0066AE','#074285','#00187B','#285964','#405F83','#416545','#4D7069','#6E9985','#7EBC89','#0283AF','#79BCBF','#99C19E'];
 
@@ -83,7 +83,7 @@ var chart = canvas.append('g')
 var transit = d3.select("svg").selectAll("rect")
 				    .data(dollars)
 				    .transition()
-				    .duration(1000) 
+				    .duration(1000)
 				    .attr("width", function(d) {return xscale(d); });
 
 var transitext = d3.select('#bars')
@@ -92,4 +92,4 @@ var transitext = d3.select('#bars')
 					.enter()
 					.append('text')
 					.attr({'x':function(d) {return xscale(d)-200; },'y':function(d,i){ return yscale(i)+35; }})
-					.text(function(d){ return d+"$"; }).style({'fill':'#fff','font-size':'14px'});
+					.text(function(d){ return "$"+d; }).style({'fill':'#fff','font-size':'14px'});
