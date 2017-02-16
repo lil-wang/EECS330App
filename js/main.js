@@ -8,8 +8,10 @@ $(document).ready(function(){
       if(scroll_start > offset.top) {
           $('.navbar').css('background', '#00a5f6');
           $('.navbar').fadeTo(500,0.9);
+          $('.log-in').css('color', '#FFFFFF');
        } else {
-          $('.navbar').css('background', 'transparent');''
+          $('.navbar').css('background', 'transparent');
+          $('.log-in').css('color', '#00a5f6');
        }
    });
     }
