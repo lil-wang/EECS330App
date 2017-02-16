@@ -25,9 +25,12 @@ var colorScale = d3.scale.quantize()
 				.domain([0,categories.length])
 				.range(colors);
 
+var width = 900;
+var height = 550;
+
 var canvas = d3.select('#overviewchart')
 				.append('svg')
-				.attr({'width':900,'height':550});
+				.attr({'width':width,'height':height});
 
 var grids = canvas.append('g')
 				  .attr('id','grid')
@@ -93,3 +96,18 @@ var transitext = d3.select('#bars')
 					.append('text')
 					.attr({'x':function(d) {return xscale(d)-200; },'y':function(d,i){ return yscale(i)+35; }})
 					.text(function(d){ return "$"+d; }).style({'fill':'#fff','font-size':'14px'});
+
+var x_label = d3.select("svg")
+				.append("text")
+		        .attr("transform", "translate(" + (width - 40) + " ," + (height - 15) + ")")
+		        .style("text-anchor", "middle")
+		        .text("Progress");
+
+var y_label = d3.select("svg")
+				.append("text")
+		        .attr("transform", "rotate(-90)")
+		        .attr("y", 20)
+		        .attr("x",-30)
+		        .attr("dy", "1em")
+		        .style("text-anchor", "middle")
+		        .text("Catagory");
