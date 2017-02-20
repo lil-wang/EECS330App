@@ -8,6 +8,7 @@ body {
   font-family: "Open Sans";
 }
 
+
 /*
  * Global add-ons
  */
@@ -21,13 +22,19 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
+
 .navbar-fixed-top {
   border-color: #D3D3D3;
-  background-color: #FFFFFF;
 }
 
 .navbar {
   background: #fff;
+}
+
+/* logo position */
+.navbar-brand {
+  padding-left: 10px;
+  padding-top: 0px;
 }
 .navbar-header .navbar-brand {
   border-top: 2px solid transparent;
@@ -48,7 +55,6 @@ body {
   border-bottom: 3px solid #FFFFFF;
   text-decoration: none;
 }
-
 /*
  * Sidebar
  */
