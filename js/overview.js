@@ -2,7 +2,7 @@ var categories= ['','Air Travel', 'Business Services', 'Check', 'Clothing', 'Cof
 
 var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,160.58,113.06,109.99,269.23,156,100.52];
 
-var colors = ['#0000b4','#0082ca','#0094ff','#0d4bcf','#0066AE','#074285','#00187B','#285964','#405F83','#416545','#4D7069','#6E9985','#7EBC89','#0283AF','#79BCBF','#99C19E'];
+var colors = ['EEBB6F','7AC176','EEBB6F','EEBB6F','E07068','7AC176','E07068','E07068','E07068','7AC176','EEBB6F','E07068','EEBB6F','7AC176','#0283AF','#79BCBF'];
 
 var grid = d3.range(25).map(function(i){
 	return {'x1':0,'y1':0,'x2':0,'y2':480};
