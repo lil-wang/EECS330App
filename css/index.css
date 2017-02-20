@@ -31,7 +31,7 @@ a.navbar-tag {
 }
 /* logo position */
 .navbar-brand {
-  padding-top: 5px;
+  padding-top: 12px;
 }
 
 /* navbar texts */
@@ -42,9 +42,13 @@ a.navbar-tag {
 
 /* LOGIN
 -------------------------------------------------- */
-.dropdown-toggle {
-
+button.btn.btn-outline-primary.log-in{
+  font-size: 18px;
+  background: #FFFFFF;
+  color: #00A5F6;
+  font-weight: 600;
 }
+
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;

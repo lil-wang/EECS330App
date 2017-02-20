@@ -1,5 +1,4 @@
 $(document).ready(function(){
-   $('.log-in').css('color', '#FFFFFF');
    var scroll_start = 0;
    var carousel = $('#myCarousel');
    var offset = carousel.offset();
@@ -16,5 +15,5 @@ $(document).ready(function(){
     }
 
 
-    
+
 });
