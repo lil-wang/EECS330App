@@ -8,7 +8,6 @@ body {
   font-family: "Open Sans";
 }
 
-
 /*
  * Global add-ons
  */
@@ -22,35 +21,34 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
-
 .navbar-fixed-top {
   border-color: #D3D3D3;
+  background-color: #FFFFFF;
 }
 
 .navbar {
   background: #fff;
 }
-
-/* logo position */
-.navbar-brand {
-  padding-left: 10px;
-  padding-top: 0px;
+.navbar-header .navbar-brand {
+  border-top: 2px solid transparent;
 }
 .navbar-inverse .navbar-nav>li>a {
   color: #FFFFFF;
-  font-weight:300;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.8px;
   margin: inherit;
   padding: 40px auto 40px auto;
+  border-top: 2px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-nav>li>a:focus {
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 16px;
   letter-spacing: 0.8px;
+  border-bottom: 3px solid #FFFFFF;
+  text-decoration: none;
 }
+
 /*
  * Sidebar
  */
