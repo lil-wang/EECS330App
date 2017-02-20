@@ -89,3 +89,10 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+.addbudget{
+  margin-top: -20px;
+  border-left-color: grey;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
