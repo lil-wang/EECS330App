@@ -1,6 +1,6 @@
 var categories= ['','Air Travel', 'Business Services', 'Check', 'Clothing', 'Coffee','Dining','Groceries','Mobile Phone','Movies + DVDs','Music','Shopping','Transfer','Transportation'];
 
-var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,160.58,113.06,109.99,269.23,156,100.52];
+var dollars = [182,100.53,121.12,145.16,105.3,146.54,212,160.58,113.06,109.99,240,156,100.52];
 
 var colors = ['EEBB6F','7AC176','EEBB6F','EEBB6F','E07068','7AC176','E07068','E07068','E07068','7AC176','EEBB6F','E07068','EEBB6F','7AC176','#0283AF','#79BCBF'];
 
