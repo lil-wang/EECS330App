@@ -10,6 +10,7 @@
   <title>:: Dashboard ::</title>
   <!--d3.js-->
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <!-- AJAX -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
@@ -21,6 +22,7 @@
   <!-- Custom styles for this template -->
   <link href="../css/dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+  <script src="https://use.fontawesome.com/a32f56ccfb.js"></script>
   
 </head>
 
@@ -48,18 +50,112 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
+      <div class="col-sm-3 col-md-3 sidebar">
         <ul class="nav nav-sidebar">
-          <h2 id="income">Income</h2>
-          <h4 id="income">$90000</h4>
-          <h2 id="spent">Spent</h2>
-          <h4 id="spent">-$10000</h4>
-          <hr>
-          <h2 >Net</h2>
-          <h4>$80000</h4>
+          <div class="module">
+            <h1 class="module-title">Accounts</h1>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      <i class="fa fa-money pull-left" aria-hidden="true"></i>Cash<div class="dashboard-amount pull-right">$3156.70</div>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">Income<div class="dashboard-sub pull-right">$5000.00</div></li>
+                    <li class="list-group-item">Spent<div class="dashboard-sub pull-right">-$1843.30</div></li>
+                    <li class="list-group-item">Net<div class="dashboard-sub pull-right">$3156.70</div></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                      <i class="fa fa-university pull-left" aria-hidden="true"></i>Debit<div class="dashboard-amount pull-right">$6843.30</div>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">Chase<div class="dashboard-sub pull-right">$3356.52</div></li>
+                    <li class="list-group-item">Citibank<div class="dashboard-sub pull-right">$3486.78</div></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                      <i class="fa fa-credit-card pull-left" aria-hidden="true"></i>Credit<div class="dashboard-amount-neg pull-right">-$622.29</div>
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item">Chase Freedom<div class="dashboard-sub pull-right">-$133.43</div></li>
+                    <li class="list-group-item">Citi Preferred<div class="dashboard-sub pull-right">-$135.43</div></li>
+                    <li class="list-group-item">Capital One<div class="dashboard-sub pull-right">-$353.43</div></li>
+                  </ul>
+                </div>
+              </div>  
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                      <i class="fa fa-graduation-cap pull-left" aria-hidden="true"></i>Loans
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <div class="dashboard-sub panel-body text-center">
+                    Do you have a mortgage, student loan, or auto loan?
+                    <hr>
+                    <li><a href="../pages/transactions.html">Add it now!</a></li>
+                  </div>
+                </div>
+              </div>  
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                      <i class="fa fa-bar-chart pull-left" aria-hidden="true"></i>Investments
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <div class="dashboard-sub panel-body text-center">
+                    Do you have an IRA, 401k, brokerage, or any other investment account?
+                    <hr>
+                    <li><a href="../pages/setting.html">Add it now!</a></li>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <h1 class="module-title">Trends</h1>  
+            <div id="trendchart"></div>
+          </div>
+          <div id="container">
+            <div id="sum-right">
+              <h5><a href="../pages/transactions.html">Net</a></h5>
+              <h4>$80000</h4>
+            </div>
+            <div id="sum-left">
+              <h5><a href="../pages/transactions.html">Income</a></h5>
+              <h4>$90000</h4>
+            </div>
+            <div id="sum-center">
+              <h5><a href="../pages/transactions.html">Spent</a></h5>
+              <h4>-$10000</h4>
+            </div>
+          </div>
         </ul>
       </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div class="col-sm-9 col-sm-offset-3 col-md-9 main">
         <h1 class="page-header">Dashboard</h1>
         <div id="overviewchart"></div>
         <script type="text/javascript" src="../js/overview.js"></script>

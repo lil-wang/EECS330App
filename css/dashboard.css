@@ -66,9 +66,9 @@ body {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
+    top: -25px;
+    bottom: 0px;
+    left: 0px;
     z-index: 1000;
     display: block;
     padding: 20px;
@@ -77,6 +77,38 @@ body {
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
   }
+}
+
+.module-title {
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.panel-default {
+  width: 100%;
+}
+.dashboard-amount {
+  color: green;
+}
+.dashboard-amount-neg {
+  color: red;
+}
+.fa-money {
+  color: green;
+}
+.fa-university {
+  color: green;
+}
+.fa-credit-card {
+  color: red;
+}
+.list-group-item {
+  font-size: 15px;
+  color: #4c4c4c;
+}
+.dashboard-sub {
+  color: #939393;
+  font-size: 15px;
 }
 
 /* Sidebar navigation */
@@ -97,16 +129,43 @@ body {
   background-color: #428bca;
 }
 
-h2, h4 {
+h4, h5 {
     text-align: center;
 }
 
-#income {
-  color: green;
+#sum-right {
+  float: right;
+  width: 33.33%;
+  border-left: 1px solid #c9c9c9;
+  height: 70px;
+  color: #5d5d5d;
 }
 
-#spent {
-  color: red;
+#sum-left {
+  float: left;
+  width: 33.33%;
+  color: #5d5d5d;
+}
+#sum-center {
+  display: inline-block;
+  margin: 0 auto;
+  width: 33.33%;
+  border-left:1px solid #c9c9c9;
+  height: 70px;
+  color: #5d5d5d;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e252";    /* adjust as needed, taken from bootstrap.css */
+    font-size: 12px;
+    float: left;        /* adjust as needed */
+    color: gray;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e250";    /* adjust as needed, taken from bootstrap.css */
 }
 
 
@@ -149,10 +208,66 @@ h2, h4 {
 }
 
 /* d3 char */
-#xaxis .domain {
+#xaxis .domain, #yaxis .domain {
   fill:none;
   stroke:#000;
 }
 #xaxis text, #yaxis text {
+  font-size: 13px;
+}
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+/* d3 trend chart */
+#trendchart {
+  padding-left: 0px;
   font-size: 12px;
+}
+path { 
+  stroke: #00A5F6;
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: gray;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: #00A5F6;
 }
