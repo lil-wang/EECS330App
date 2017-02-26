@@ -158,3 +158,12 @@ body {
   border-left-style: solid;
   padding-bottom: 200px;
 }
+
+.category {
+    width: 100%;
+    text-align: left;
+}
+
+.caret {
+  float: right;
+}
