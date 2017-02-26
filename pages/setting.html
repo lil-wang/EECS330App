@@ -47,45 +47,142 @@
 
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="chosentab"><a href="../pages/setting.html">Accounts</a></li>
-            <li><a href="../pages/setting_security.html">Security</a></li>
-            <li><a href="../pages/setting_notifications.html">Notifications</a></li>
-            <li><a href="../pages/setting_profile.html">Profile</a></li>
-          </ul>
+
+        <h1 class="page-header">Setting</h1>
+        <div class="row">
+          <div class="col-md-6 all_accounts">
+            <h2> All Accounts </h2>
+            <div class="bankaccount">
+              <div class="accountname">
+                American Express
+              </div>
+              <div class="accountdetails">
+                <p>-$353.43</p>
+              </div>
+            </div>
+            <div class="bankaccount">
+              <div class="accountname">
+                Citi Bank
+              </div>
+              <div class="accountdetails">
+                <p>$5135.43</p>
+              </div>
+            </div>
+            <div class="bankaccount">
+              <div class="accountname">
+                Visa Credit
+              </div>
+              <div class="accountdetails">
+                <p>-$133.43</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 profile">
+            <h2> Profile </h2>
+            <div class="contents">
+              <div class="contents_title">Age</div>
+
+              <input  class="form-control" placeholder="20" required>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Gender</div>
+              <div>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+              </div>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Marital Status</div>
+              <div>
+                <input type="radio" name="maritalstatus" value="single" checked> Single
+                <input type="radio" name="maritalstatus" value="married"> Married
+                <input type="radio" name="maritalstatus" value="divorced"> Divorced
+                <input type="radio" name="maritalstatus" value="widowed"> Widowed
+
+              </div>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Credit Score</div>
+              <input  class="form-control" placeholder="690" required>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Education Level</div>
+              <input  class="form-control" placeholder="College" required>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Profession</div>
+              <input  class="form-control" placeholder="Student" required>
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">All Accounts</h1>
-          <div class="bankaccount">
-            <div class="accountname">
-              Capital One
+
+        <div class="row">
+          <div class="col-md-6 notifications">
+            <h2> Notifications </h2>
+            <div class="contents">
+              <div class="contents_title">Send summary emails</div>
+              <input type="radio" name="summary" value="yes" checked> Yes
+              <input type="radio" name="summary" value="no"> No
+
             </div>
-            <div class="accountdetails">
-              <p>Quicksilver:  -$353.43</p>
+            <div class="contents">
+              <div class="contents_title">Send advice email</div>
+              <input type="radio" name="advice" value="yes" checked> Yes
+              <input type="radio" name="advice" value="no"> No
+            </div>
+            <div class="contents">
+              <div class="contents_title">Send bill reminder alerts</div>
+              <input type="radio" name="bill" value="yes" checked> Yes
+              <input type="radio" name="bill" value="no"> No
+            </div>
+            <div class="contents">
+              <div class="contents_title">Send spending alerts</div>
+              <input type="radio" name="spending" value="yes" checked> Yes
+              <input type="radio" name="spending" value="no"> No
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
             </div>
           </div>
-          <div class="bankaccount">
-            <div class="accountname">
-              Citi
+
+          <div class="col-md-6 security">
+            <h2> Security </h2>
+            <div class="contents">
+              <div class="contents_title">Name</div>
+              <input  class="form-control" placeholder="John Smith" required>
             </div>
-            <div class="accountdetails">
-              <p>Preferred:  -$135.43</p>
+            <div class="contents">
+              <div class="contents_title">Email</div>
+              <input  class="form-control" placeholder="johnsmith@gmail.com" required>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Password</div>
+              <input  class="form-control" placeholder="*********" required>
+            </div>
+            <div class="contents">
+              <div class="contents_title">Phone Number</div>
+              <input  class="form-control" placeholder="012-345-6789" required>
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
             </div>
           </div>
-          <div class="bankaccount">
-            <div class="accountname">
-              Chase
-            </div>
-            <div class="accountdetails">
-              <p>Freedom:  -$133.43</p>
-              <p>Checking: $3356.52</p>
-            </div>
-          </div>
+
         </div>
-      </div>
     </div>
 
+    <script type="text/javascript" src="../js/setting.js" >  </script>
+
   </body>
+
+
 </html>
