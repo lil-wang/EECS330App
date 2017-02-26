@@ -55,6 +55,9 @@ body {
   border-bottom: 3px solid #FFFFFF;
   text-decoration: none;
 }
+.navbar-inverse .navbar-nav .nav-setting > a {
+  border-bottom: 3px solid #FFFFFF;
+}
 /*
  * Sidebar
  */
@@ -147,19 +150,34 @@ body {
 .bankaccount{
     width: 500px;
     border: 1px solid black;
-    padding: 20px;
-    margin: 25px;
-    text-align: left;
-    background-color:rgb(232, 236, 245);
-    font-size:30px;
+    padding: 5px;
+    margin: 15px;
+    background-color:white;
 }
 
 .accountname{
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 900;
-
+  text-align: left;
 }
 
+.accountnumber{
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+}
+.accountdetails{
+  font-size:15px;
+  text-align:right;
+}
+
+.addaccount{
+  width: 500px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 15px;
+  background-color:white;
+}
 .subheader{
   color:grey;
 }
@@ -167,7 +185,8 @@ body {
 .contents{
   border:1px solid black;
   width:500px;
-  padding: 10px;
+  height:80px;
+  padding: 12px;
   margin:10px;
   background-color:rgb(232, 236, 245);
 
@@ -197,6 +216,19 @@ body {
 
 .chosentab{
   background-color:lightgrey;
+}
+
+.editbuttons{
+  margin:10px;
+}
+
+.category {
+  width: 100%;
+  text-align:left;
+}
+
+.caret{
+  float:right;
 }
 
 /* end of the 4 tabs on the setting page */

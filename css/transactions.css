@@ -48,7 +48,9 @@ body {
   border-bottom: 3px solid #FFFFFF;
   text-decoration: none;
 }
-
+.navbar-inverse .navbar-nav .nav-trans > a {
+  border-bottom: 3px solid #FFFFFF;
+}
 /* Sidebar navigation */
 .nav-sidebar {
   margin-right: -21px; /* 20px padding + 1px border */
@@ -151,7 +153,17 @@ body {
 /*Add Transactions Form */
 .addtrans{
   margin-top: -20px;
-  border-left-color: grey;
-  border-left-width: 1px;
+  border-left-color: #00a5f6;
+  border-left-width: 3px;
   border-left-style: solid;
+  padding-bottom: 200px;
+}
+
+.category {
+    width: 100%;
+    text-align: left;
+}
+
+.caret {
+  float: right;
 }
