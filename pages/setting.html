@@ -53,30 +53,65 @@
           <div class="col-md-6 all_accounts">
             <h2> All Accounts </h2>
             <div class="bankaccount">
-              <div class="accountname">
-                American Express
+              <div class="row">
+                <span class="col-md-6 accountname">
+                  American Express
+                </span>
+                <span class="col-md-6 accountnumber">
+                  **** **** **** 3456
+                </span>
               </div>
-              <div class="accountdetails">
-                <p>-$353.43</p>
-              </div>
+              <span class="accountdetails">
+                <p>Balance: -$353.43</p>
+              </span>
             </div>
             <div class="bankaccount">
-              <div class="accountname">
-                Citi Bank
+              <div class="row">
+                <span class="col-md-6 accountname">
+                  Citi
+                </span>
+                <span class="col-md-6 accountnumber">
+                  **** **** **** 1234
+                </span>
               </div>
-              <div class="accountdetails">
-                <p>$5135.43</p>
-              </div>
+              <span class="accountdetails">
+                <p>Balance: $5353.43</p>
+              </span>
             </div>
             <div class="bankaccount">
-              <div class="accountname">
-                Visa Credit
+              <div class="row">
+                <span class="col-md-6 accountname">
+                  Visa Credit
+                </span>
+                <span class="col-md-6 accountnumber">
+                  **** **** **** 9876
+                </span>
               </div>
-              <div class="accountdetails">
-                <p>-$133.43</p>
+              <span class="accountdetails">
+                <p>Balance: -$353.43</p>
+              </span>
+            </div>
+            <div class="addaccount">
+              <h3 class="page-header">Add an Account</h2>
+              <form class="form" role="form" method="post" action="pages/setting.html" accept-charset="UTF-8" id="login-nav">
+                <div class="form-group">
+                  <input class="form-control" placeholder="Account Number" required>
+                </div>
+                <div class="dropdown form-group">
+                  <button class="btn btn-default dropdown-toggle category" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose Account Type<span class="caret"></span> </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li id="choice1"><a href="#">Credit</a></li>
+                    <li id="choice2"><a href="#">Checking</a></li>
+                    <li id="choice3"><a href="#">Saving</a></li>
+                    <li id="choice4"><a href="#">Other</a></li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Amount Name" required>
+                </div>
+              </form>
+            </div>
 
-              </div>
-            </div>
           </div>
 
           <div class="col-md-6 profile">
