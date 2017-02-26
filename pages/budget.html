@@ -23,7 +23,7 @@
 
 
   <link href="../css/budget.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 
 <body>
@@ -37,10 +37,10 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../pages/dashboard.html">Dashboard</a></li>
-          <li><a href="../pages/transactions.html">Transactions</a></li>
-          <li><a href="../pages/budget.html">Budget</a></li>
-          <li><a href="../pages/setting.html">Setting</a></li>
+          <li class="nav-dash"><a href="../pages/dashboard.html">Dashboard</a></li>
+          <li class="nav-trans"><a href="../pages/transactions.html">Transactions</a></li>
+          <li class="nav-budget"><a href="../pages/budget.html">Budget</a></li>
+          <li class="nav-setting"><a href="../pages/setting.html">Setting</a></li>
           <li><a href="../index.html">Log Out</a></li>
 
         </ul>
@@ -283,7 +283,7 @@
   <form class="form" role="form" method="post" action="pages/dashboard.html" accept-charset="UTF-8" id="login-nav">
 
       <div class="dropdown form-group">
-          <button class="btn btn-default dropdown-toggle category" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose a Category<span class="caret"></span> </button>
+          <button class="btn btn-default dropdown-toggle category" type="button" id="dropdownMenu1 categdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose a Category<span class="caret"></span> </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li id="choice1"><a href="#">Air Travel</a></li>
             <li id="choice2"><a href="#">Business Services</a></li>

@@ -1,4 +1,4 @@
-var display = document.getElementById("dropdownMenu1");
+var display = document.getElementById("categdropdown");
 
 for (var i=1; i<=11; i++) {
 	var button = document.getElementById("choice" + i);
