@@ -84,65 +84,72 @@
             <div class="contents">
               <div class="contents_title">Age</div>
 
-              <input  class="form-control" placeholder="Age" required>
+              <input  class="form-control" placeholder="20" required>
             </div>
             <div class="contents">
               <div class="contents_title">Gender</div>
               <div>
-                <input type="checkbox" name="gender"> <label >Male</label>
-                <input type="checkbox" name="gender"> <label >Female</label>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
               </div>
             </div>
             <div class="contents">
               <div class="contents_title">Marital Status</div>
               <div>
-                <input type="checkbox" > <label >Single</label>
-                <input type="checkbox" > <label >Married</label>
-                <input type="checkbox" > <label >Divorced</label>
-                <input type="checkbox" > <label >Widowed</label>
+                <input type="radio" name="maritalstatus" value="single" checked> Single
+                <input type="radio" name="maritalstatus" value="married"> Married
+                <input type="radio" name="maritalstatus" value="divorced"> Divorced
+                <input type="radio" name="maritalstatus" value="widowed"> Widowed
+
               </div>
             </div>
             <div class="contents">
               <div class="contents_title">Credit Score</div>
-              <input  class="form-control" placeholder="Credit Score" required>
+              <input  class="form-control" placeholder="690" required>
             </div>
             <div class="contents">
               <div class="contents_title">Education Level</div>
-              <input  class="form-control" placeholder="Education Level" required>
+              <input  class="form-control" placeholder="College" required>
             </div>
-
             <div class="contents">
               <div class="contents_title">Profession</div>
-              <input  class="form-control" placeholder="Profession" required>
+              <input  class="form-control" placeholder="Student" required>
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
             </div>
           </div>
         </div>
 
         <div class="row">
-
-
           <div class="col-md-6 notifications">
             <h2> Notifications </h2>
             <div class="contents">
               <div class="contents_title">Send summary emails</div>
-              <input type="checkbox" > <label >Yes</label>
-              <input type="checkbox" > <label >No</label>
+              <input type="radio" name="summary" value="yes" checked> Yes
+              <input type="radio" name="summary" value="no"> No
 
             </div>
             <div class="contents">
               <div class="contents_title">Send advice email</div>
-              <input type="checkbox" > <label >Yes</label>
-              <input type="checkbox" > <label >No</label>
+              <input type="radio" name="advice" value="yes" checked> Yes
+              <input type="radio" name="advice" value="no"> No
             </div>
             <div class="contents">
               <div class="contents_title">Send bill reminder alerts</div>
-              <input type="checkbox" > <label >Yes</label>
-              <input type="checkbox" > <label >No</label>
+              <input type="radio" name="bill" value="yes" checked> Yes
+              <input type="radio" name="bill" value="no"> No
             </div>
             <div class="contents">
               <div class="contents_title">Send spending alerts</div>
-              <input type="checkbox" > <label >Yes</label>
-              <input type="checkbox" > <label >No</label>
+              <input type="radio" name="spending" value="yes" checked> Yes
+              <input type="radio" name="spending" value="no"> No
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
             </div>
           </div>
 
@@ -150,23 +157,25 @@
             <h2> Security </h2>
             <div class="contents">
               <div class="contents_title">Name</div>
-              <input  class="form-control" placeholder="Name" required>
+              <input  class="form-control" placeholder="John Smith" required>
             </div>
             <div class="contents">
               <div class="contents_title">Email</div>
-              <input  class="form-control" placeholder="Email" required>
+              <input  class="form-control" placeholder="johnsmith@gmail.com" required>
             </div>
             <div class="contents">
               <div class="contents_title">Password</div>
-              <input  class="form-control" placeholder="Password" required>
+              <input  class="form-control" placeholder="*********" required>
             </div>
             <div class="contents">
               <div class="contents_title">Phone Number</div>
-              <input  class="form-control" placeholder="Phone Number" required>
+              <input  class="form-control" placeholder="012-345-6789" required>
+            </div>
+            <div >
+              <button class="editbuttons"> Save changes </button>
+              <button class="editbuttons"> Cancel </button>
             </div>
           </div>
-
-
 
         </div>
     </div>
