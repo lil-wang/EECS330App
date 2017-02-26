@@ -150,19 +150,34 @@ body {
 .bankaccount{
     width: 500px;
     border: 1px solid black;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
+    padding: 5px;
+    margin: 15px;
     background-color:white;
-    font-size:30px;
 }
 
 .accountname{
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 900;
-
+  text-align: left;
 }
 
+.accountnumber{
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+}
+.accountdetails{
+  font-size:15px;
+  text-align:right;
+}
+
+.addaccount{
+  width: 500px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 15px;
+  background-color:white;
+}
 .subheader{
   color:grey;
 }
@@ -205,6 +220,15 @@ body {
 
 .editbuttons{
   margin:10px;
+}
+
+.category {
+  width: 100%;
+  text-align:left;
+}
+
+.caret{
+  float:right;
 }
 
 /* end of the 4 tabs on the setting page */
