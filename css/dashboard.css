@@ -55,6 +55,9 @@ body {
   border-bottom: 3px solid #FFFFFF;
   text-decoration: none;
 }
+.navbar-inverse .navbar-nav .nav-dash > a {
+  border-bottom: 3px solid #FFFFFF;
+}
 /*
  * Sidebar
  */
