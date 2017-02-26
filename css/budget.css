@@ -100,21 +100,21 @@ body {
 
 .addbudget{
   margin-top: -20px;
-  border-left-color: skyblue;
+  border-left-color: #00a5f6;
   border-left-width: 2px;
   border-left-style: solid;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: skyblue;
-  padding-bottom: 100px;
+  border-bottom-color: #00a5f6;
+  padding-bottom: 50px;
 }
 
 .editbudget{
   margin-top: -20px;
-  border-left-color: skyblue;
-  border-left-width: 2px;
+  border-left-color: #00a5f6;
+  border-left-width: 3px;
   border-left-style: solid;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .category {
