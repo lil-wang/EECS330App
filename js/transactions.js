@@ -59,6 +59,5 @@ function add_transaction(){
   var add_category = display.innerHTML;
   var add_account = display2.innerHTML;
 
-  confirm("Congratulations! You have added a transaction:\n" + "- Date: " + add_date +"\n" + "- Description: " + add_description + "\n" + "- Category: " + add_category + "\n" + "- Amount: $" + add_amount + "\n" + "- Account: " + add_account + "\n");
-
+  confirm("Your transaction:\n" + "- Date: " + add_date +"\n" + "- Description: " + add_description + "\n" + "- Category: " + add_category + "\n" + "- Amount: $" + add_amount + "\n" + "- Account: " + add_account + "\n" + "is being verified, please check your email for the confirmation code.");
 }
