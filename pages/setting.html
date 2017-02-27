@@ -95,10 +95,10 @@
               <h3 class="page-header">Add an Account</h2>
               <form class="form" role="form" method="post" action="pages/setting.html" accept-charset="UTF-8" id="login-nav">
                 <div class="form-group">
-                  <input class="form-control" placeholder="Account Number" required>
+                  <input class="form-control" id="account-number" placeholder="Account Number" required>
                 </div>
                 <div class="dropdown form-group">
-                  <button class="btn btn-default dropdown-toggle category" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose Account Type<span class="caret"></span> </button>
+                  <button class="btn btn-default dropdown-toggle category" type="button" id="account-type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose Account Type<span class="caret"></span> </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li id="choice1"><a href="#">Credit</a></li>
                     <li id="choice2"><a href="#">Checking</a></li>
@@ -107,11 +107,11 @@
                   </ul>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" placeholder="Amount Name" required>
+                  <input class="form-control" id="account-name" placeholder="Amount Name" required>
                 </div>
               </form>
               <div >
-                <button class="editbuttons"> Save changes </button>
+                <button class="editbuttons" onclick="add_account();"> Save changes </button>
                 <button class="editbuttons"> Cancel </button>
               </div>
             </div>
@@ -219,7 +219,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="../js/setting.js" >  </script>
+    <script type="text/javascript" src="../js/setting.js" > </script>
 
   </body>
 
