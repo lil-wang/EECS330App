@@ -148,13 +148,29 @@ body {
 }
 
 /* for the 4 tabs on the setting page */
+
+.row{
+  margin:10px;
+}
+
+.setting-group{
+  border: 1px solid black;
+  padding: 18px;
+  align-content: center;
+}
+
+.group-name{
+  padding-left:7px;
+}
+
 .bankaccount{
-    width: 500px;
+    width: 600px;
     border: 1px solid black;
-    padding: 5px;
-    margin: 15px;
+    padding:7.2px;
+    margin: 7px;
     background-color:white;
 }
+
 
 .accountname{
   font-size: 20px;
@@ -169,14 +185,15 @@ body {
 }
 .accountdetails{
   font-size:15px;
-  text-align:right;
+  text-align: right;
+
 }
 
 .addaccount{
-  width: 500px;
+  width: 600px;
   border: 1px solid black;
-  padding: 5px;
-  margin: 15px;
+  padding: 10px;
+  margin: 7px;
   background-color:white;
 }
 .subheader{
@@ -185,10 +202,10 @@ body {
 
 .contents{
   border:1px solid black;
-  width:500px;
+  width:600px;
   height:80px;
-  padding: 12px;
-  margin:10px;
+  padding: 10px;
+  margin: 7px;
   background-color:rgb(232, 236, 245);
 
 }
@@ -210,14 +227,6 @@ body {
   margin:2px;
 }
 
-.button_selected{
-  background-color:lightgrey;
-}
-
-
-.chosentab{
-  background-color:lightgrey;
-}
 
 .editbuttons{
   margin:10px;
@@ -231,5 +240,6 @@ body {
 .caret{
   float:right;
 }
+
 
 /* end of the 4 tabs on the setting page */
